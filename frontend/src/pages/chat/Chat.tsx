@@ -8,6 +8,8 @@ import rehypeRaw from "rehype-raw";
 
 import styles from "./Chat.module.css";
 import Azure from "../../assets/Azure.svg";
+import node4logo from '../../assets/Node4-logo.png';
+
 
 import {
     ChatMessage,
@@ -169,12 +171,12 @@ const Chat = () => {
                         {!lastQuestionRef.current ? (
                             <Stack className={styles.chatEmptyState}>
                                 <img
-                                    src={Azure}
+                                    src={node4logo}
                                     className={styles.chatIcon}
                                     aria-hidden="true"
                                 />
                                 <h1 className={styles.chatEmptyStateTitle}>Start chatting</h1>
-                                <h2 className={styles.chatEmptyStateSubtitle}>This chatbot is configured to answer your questions</h2>
+                                <h2 className={styles.chatEmptyStateSubtitle}>This HR chatbot is configured to answer your questions on company HR policy</h2>
                             </Stack>
                         ) : (
                             <div className={styles.chatMessageStream} style={{ marginBottom: isLoading ? "40px" : "0px"}} role="log">

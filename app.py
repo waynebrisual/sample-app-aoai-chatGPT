@@ -25,9 +25,9 @@ def assets(path):
 
 
 # ACS Integration Settings
-AZURE_SEARCH_SERVICE = os.environ.get("AZURE_SEARCH_SERVICE")
-AZURE_SEARCH_INDEX = os.environ.get("AZURE_SEARCH_INDEX")
-AZURE_SEARCH_KEY = os.environ.get("AZURE_SEARCH_KEY")
+AZURE_SEARCH_SERVICE = os.environ.get("AZURE_SEARCH_SERVICE", "acs-n4dt-hr-openai-01")
+AZURE_SEARCH_INDEX = os.environ.get("AZURE_SEARCH_INDEX", "n4dthr")
+AZURE_SEARCH_KEY = os.environ.get("AZURE_SEARCH_KEY", "iJdqT4zK2Mvz83NvIdoxqdb4k6b23MS7eWeMInmn2xAzSeCScG1e")
 AZURE_SEARCH_USE_SEMANTIC_SEARCH = os.environ.get("AZURE_SEARCH_USE_SEMANTIC_SEARCH", "false")
 AZURE_SEARCH_SEMANTIC_SEARCH_CONFIG = os.environ.get("AZURE_SEARCH_SEMANTIC_SEARCH_CONFIG", "default")
 AZURE_SEARCH_TOP_K = os.environ.get("AZURE_SEARCH_TOP_K", 5)
@@ -38,14 +38,14 @@ AZURE_SEARCH_TITLE_COLUMN = os.environ.get("AZURE_SEARCH_TITLE_COLUMN")
 AZURE_SEARCH_URL_COLUMN = os.environ.get("AZURE_SEARCH_URL_COLUMN")
 
 # AOAI Integration Settings
-AZURE_OPENAI_RESOURCE = os.environ.get("AZURE_OPENAI_RESOURCE")
-AZURE_OPENAI_MODEL = os.environ.get("AZURE_OPENAI_MODEL")
-AZURE_OPENAI_KEY = os.environ.get("AZURE_OPENAI_KEY")
+AZURE_OPENAI_RESOURCE = os.environ.get("AZURE_OPENAI_RESOURCE", "cog-bhr6y7ysy5bfm")
+AZURE_OPENAI_MODEL = os.environ.get("AZURE_OPENAI_MODEL", "chat")
+AZURE_OPENAI_KEY = os.environ.get("AZURE_OPENAI_KEY", "02119879019f47728ea82bbb3f679246")
 AZURE_OPENAI_TEMPERATURE = os.environ.get("AZURE_OPENAI_TEMPERATURE", 0)
 AZURE_OPENAI_TOP_P = os.environ.get("AZURE_OPENAI_TOP_P", 1.0)
 AZURE_OPENAI_MAX_TOKENS = os.environ.get("AZURE_OPENAI_MAX_TOKENS", 1000)
 AZURE_OPENAI_STOP_SEQUENCE = os.environ.get("AZURE_OPENAI_STOP_SEQUENCE")
-AZURE_OPENAI_SYSTEM_MESSAGE = os.environ.get("AZURE_OPENAI_SYSTEM_MESSAGE", "You are an AI assistant that helps people find information.")
+AZURE_OPENAI_SYSTEM_MESSAGE = os.environ.get("AZURE_OPENAI_SYSTEM_MESSAGE", "•	You are a HR chatbot whose primary goal is to help users with answering their questions about HR policy. •	Provide concise replies that are friendly and conversational. •	Answer questions truthfully based on information.  •	Do not answer questions that are not related to HR policy and respond with I can only help with any HR-related questions you may have.•	Your answers should contain as much detail as possible and be in bullet points.•	If you do not know the answer to a question, respond by asking follow up questions.")
 AZURE_OPENAI_PREVIEW_API_VERSION = os.environ.get("AZURE_OPENAI_PREVIEW_API_VERSION", "2023-06-01-preview")
 AZURE_OPENAI_STREAM = os.environ.get("AZURE_OPENAI_STREAM", "true")
 AZURE_OPENAI_MODEL_NAME = os.environ.get("AZURE_OPENAI_MODEL_NAME", "gpt-35-turbo") # Name of the model, e.g. 'gpt-35-turbo' or 'gpt-4'
